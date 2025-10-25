@@ -35,7 +35,43 @@ A comprehensive C-based security analysis tool designed to perform automated sec
 - clang-tidy (optional, for enhanced static analysis)
 - cppcheck (optional, for enhanced static analysis)
 
-### Build from Source
+### 🐧 Linux Installation
+
+#### Quick Setup (Automated)
+```bash
+# Clone the repository
+git clone https://github.com/masterfabric/masterfabric-pre-release.git
+cd masterfabric-pre-release
+
+# Run automated setup script
+chmod +x setup-linux.sh
+./setup-linux.sh
+```
+
+#### Manual Installation
+
+**Arch Linux / Manjaro:**
+```bash
+sudo pacman -S base-devel gcc make pkg-config curl json-c clang cppcheck
+```
+
+**Ubuntu / Debian:**
+```bash
+sudo apt update
+sudo apt install build-essential gcc make pkg-config libcurl4-openssl-dev libjson-c-dev clang-tidy cppcheck
+```
+
+**Fedora / CentOS / RHEL:**
+```bash
+sudo dnf install gcc make pkg-config libcurl-devel json-c-devel clang-tools-extra cppcheck
+```
+
+**openSUSE:**
+```bash
+sudo zypper install gcc make pkg-config libcurl-devel libjson-c-devel clang-tools cppcheck
+```
+
+### 🍎 macOS Installation
 
 ```bash
 # Clone the repository
