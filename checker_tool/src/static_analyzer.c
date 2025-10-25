@@ -1,3 +1,6 @@
+#define _POSIX_C_SOURCE 200809L
+#define _GNU_SOURCE
+
 #include "static_analyzer.h"
 #include <stdio.h>
 #include <stdlib.h>
