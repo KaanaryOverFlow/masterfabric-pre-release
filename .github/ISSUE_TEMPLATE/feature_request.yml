@@ -1,0 +1,191 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for MasterFabric Pre-Release Security Checker
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please fill out the form below to help us understand your request.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: ✨ Feature Description
+      description: A clear and concise description of the feature you'd like to see.
+      placeholder: Describe the feature you'd like to be added...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: 🎯 Problem Statement
+      description: What problem does this feature solve? What use case does it address?
+      placeholder: |
+        - What problem are you trying to solve?
+        - What workflow does this improve?
+        - What limitation does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe your proposed solution in detail.
+      placeholder: |
+        - How should this feature work?
+        - What should the user experience be like?
+        - What should the output/result look like?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Describe any alternative solutions or workarounds you've considered.
+      placeholder: What other approaches have you thought about?
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: 📂 Feature Category
+      description: Which category does this feature fall under?
+      options:
+        - Security Analysis
+        - Language Support
+        - CVE Integration
+        - Policy Management
+        - Reporting
+        - CI/CD Integration
+        - Performance
+        - User Interface
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: programming-languages
+    attributes:
+      label: 💻 Programming Languages
+      description: Which programming languages would this feature affect?
+      options:
+        - C/C++
+        - JavaScript/TypeScript
+        - Python
+        - Rust
+        - Go
+        - Dart
+        - Multiple languages
+        - All languages
+        - Not applicable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚨 Priority
+      description: How important is this feature to you?
+      options:
+        - Critical (blocking current workflows)
+        - High (significant improvement to security analysis)
+        - Medium (nice to have enhancement)
+        - Low (minor improvement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 🎯 Use Cases
+      description: Describe specific use cases where this feature would be valuable.
+      placeholder: |
+        - Use case 1: ...
+        - Use case 2: ...
+        - Use case 3: ...
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: 📝 Examples
+      description: Provide examples of how this feature would work (code snippets, command examples, etc.).
+      placeholder: |
+        ```bash
+        # Example command usage
+        masterfabric-prerelease --new-feature
+        ```
+        
+        ```yaml
+        # Example configuration
+        new_feature:
+          enabled: true
+          options: ...
+        ```
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: 🎨 Mockups/Screenshots
+      description: If applicable, add mockups, screenshots, or diagrams to illustrate your idea.
+      placeholder: Drag and drop images here or paste links to mockups...
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: 📊 Impact Assessment
+      description: What would be the impact of this feature?
+      options:
+        - label: Improves security analysis accuracy
+          required: false
+        - label: Reduces false positives
+          required: false
+        - label: Reduces false negatives
+          required: false
+        - label: Improves performance
+          required: false
+        - label: Enhances user experience
+          required: false
+        - label: Adds new language support
+          required: false
+        - label: Improves CI/CD integration
+          required: false
+        - label: Enhances reporting capabilities
+          required: false
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: 🔧 Implementation Notes
+      description: Any technical considerations or implementation ideas you have.
+      placeholder: |
+        - Technical considerations
+        - Potential challenges
+        - Integration points
+        - Dependencies
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about the feature request here.
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I understand this is a public repository and my request will be visible to others
+          required: true
+        - label: I am willing to help implement this feature if needed
+          required: false

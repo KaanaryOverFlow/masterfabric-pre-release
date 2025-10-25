@@ -1,0 +1,38 @@
+failure_threshold: HIGH
+
+approved_sdks:
+  - name: "react"
+    versions: ">=18.0.0"
+  - name: "next"
+    versions: ">=13.1.0"
+  - name: "express"
+    versions: ">=4.18.0"
+
+blacklisted_versions:
+  - "lodash@<4.17.21"
+  - "node-fetch@<2.6.7"
+  - "bcrypt@<5.0.0"
+  - "jsonwebtoken@<9.0.0"
+
+minimum_acceptable_standards:
+  symmetric_encryption: "AES-256-GCM"
+  hashing: "SHA3-256"
+  tls_version: "1.3"
+
+hardcoded_secret_scan:
+  enabled: true
+  entropy_threshold: 4.5
+
+required_hardening_flags:
+  - "-fstack-protector-strong"
+  - "-D_FORTIFY_SOURCE=2"
+  - "-Wl,-z,relro"
+  - "-Wl,-z,now"
+
+binary_checks:
+  strip_symbols: true
+  pie_enabled: true
+  stack_canary: true
+
+memory_safety_checks: true
+concurrency_checks: true

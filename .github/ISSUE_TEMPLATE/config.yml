@@ -1,0 +1,26 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🐛 Bug Report
+    url: https://github.com/masterfabric/masterfabric-pre-release/issues/new?template=bug_report.yml
+    about: Report a bug or unexpected behavior in MasterFabric Pre-Release Security Checker
+  - name: ✨ Feature Request
+    url: https://github.com/masterfabric/masterfabric-pre-release/issues/new?template=feature_request.yml
+    about: Suggest a new feature or enhancement for MasterFabric Pre-Release Security Checker
+  - name: 📚 Documentation
+    url: https://github.com/masterfabric/masterfabric-pre-release/issues/new?template=documentation.yml
+    about: Report documentation issues or suggest documentation improvements
+  - name: 🔒 Security Vulnerability
+    url: https://github.com/masterfabric/masterfabric-pre-release/issues/new?template=security_vulnerability.yml
+    about: Report a security vulnerability in MasterFabric Pre-Release Security Checker
+  - name: ❓ Question
+    url: https://github.com/masterfabric/masterfabric-pre-release/issues/new?template=question.yml
+    about: Ask a question about MasterFabric Pre-Release Security Checker
+  - name: ⚡ Performance Issue
+    url: https://github.com/masterfabric/masterfabric-pre-release/issues/new?template=performance.yml
+    about: Report performance issues or suggest performance improvements
+  - name: 💬 GitHub Discussions
+    url: https://github.com/masterfabric/masterfabric-pre-release/discussions
+    about: Ask questions, share ideas, or discuss the project with the community
+  - name: 📧 Security Contact
+    url: mailto:license@masterfabric.co?subject=[SECURITY]%20-%20Brief%20Description
+    about: Report security vulnerabilities privately via email

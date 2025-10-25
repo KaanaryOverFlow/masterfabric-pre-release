@@ -1,0 +1,192 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in MasterFabric Pre-Release Security Checker
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug! Please fill out the form below to help us understand and reproduce the issue.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Run command '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: ❌ Actual Behavior
+      description: A clear and concise description of what actually happened.
+      placeholder: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: 📋 Error Output
+      description: If applicable, paste the complete error output here.
+      placeholder: |
+        ```
+        Paste error output here...
+        ```
+      render: shell
+
+  - type: textarea
+    id: security-policy
+    attributes:
+      label: 🔒 Security Policy File
+      description: If applicable, paste your .security.yaml file content (remove any sensitive information).
+      placeholder: |
+        ```yaml
+        # Paste your security policy here...
+        ```
+      render: yaml
+
+  - type: dropdown
+    id: programming-language
+    attributes:
+      label: 💻 Programming Language
+      description: Which programming language was being analyzed when the bug occurred?
+      options:
+        - C/C++
+        - JavaScript/TypeScript
+        - Python
+        - Rust
+        - Go
+        - Dart
+        - Multiple languages
+        - Not applicable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scan-type
+    attributes:
+      label: 🔍 Scan Type
+      description: What type of security scan was being performed?
+      options:
+        - Dependency Analysis
+        - Cryptographic Scanner
+        - Binary Hardening
+        - Static Analysis
+        - CVE API Integration
+        - Policy Validation
+        - Multiple scan types
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: command-used
+    attributes:
+      label: ⚡ Command Used
+      description: The exact command you used to run the security checker
+      placeholder: masterfabric-prerelease --check /path/to/project --verbose
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Severity
+      description: How severe is this bug?
+      options:
+        - Critical (tool crashes, false negatives on critical vulnerabilities)
+        - High (major functionality broken, incorrect security analysis)
+        - Medium (minor functionality issues, incorrect reporting)
+        - Low (cosmetic issues, minor inconveniences)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Please check all that apply to your environment
+      options:
+        - label: macOS
+          required: false
+        - label: Linux (Ubuntu/Debian)
+          required: false
+        - label: Linux (CentOS/RHEL)
+          required: false
+        - label: Windows
+          required: false
+        - label: Other (please specify in additional info)
+          required: false
+
+  - type: input
+    id: os-version
+    attributes:
+      label: 🖥️ OS Version
+      description: Your operating system version
+      placeholder: macOS 14.0, Ubuntu 22.04, Windows 11, etc.
+
+  - type: input
+    id: compiler-version
+    attributes:
+      label: 🔧 Compiler Version
+      description: Your compiler version (GCC, Clang, etc.)
+      placeholder: GCC 11.4, Clang 15.0, etc.
+
+  - type: input
+    id: architecture
+    attributes:
+      label: 🏗️ Architecture
+      description: Your system architecture
+      placeholder: x86_64, ARM64, etc.
+
+  - type: input
+    id: tool-version
+    attributes:
+      label: 🔧 Tool Version
+      description: MasterFabric Pre-Release Security Checker version
+      placeholder: Run 'masterfabric-prerelease --version' to get this
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about the problem here.
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I understand this is a public repository and my issue will be visible to others
+          required: true

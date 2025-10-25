@@ -1,0 +1,161 @@
+name: ❓ Question
+description: Ask a question about MasterFabric Pre-Release Security Checker
+title: "[QUESTION] "
+labels: ["question", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your question! Please provide as much detail as possible to help us give you a comprehensive answer.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: ❓ Your Question
+      description: What would you like to know about MasterFabric Pre-Release Security Checker?
+      placeholder: Ask your question here...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: question-category
+    attributes:
+      label: 📂 Question Category
+      description: What category does your question fall under?
+      options:
+        - Installation & Setup
+        - Configuration
+        - Usage & Commands
+        - Security Analysis
+        - CVE Integration
+        - Policy Management
+        - CI/CD Integration
+        - Troubleshooting
+        - Performance
+        - Contributing
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📝 Context
+      description: Provide context about your situation, what you're trying to achieve, or what led to this question.
+      placeholder: |
+        - What are you trying to accomplish?
+        - What's your current setup?
+        - What have you tried so far?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: 🔄 Current Behavior
+      description: If applicable, describe what's currently happening.
+      placeholder: What is the current behavior or output you're seeing?
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: If applicable, describe what you expected to happen.
+      placeholder: What did you expect to happen?
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: 📋 Error Output
+      description: If you're encountering errors, paste the complete error output here.
+      placeholder: |
+        ```
+        Paste error output here...
+        ```
+      render: shell
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: ⚙️ Configuration
+      description: If applicable, paste your configuration files (remove any sensitive information).
+      placeholder: |
+        ```yaml
+        # .security.yaml content
+        failure_threshold: HIGH
+        # ... other configuration
+        ```
+      render: yaml
+
+  - type: input
+    id: command-used
+    attributes:
+      label: ⚡ Command Used
+      description: If applicable, the exact command you used.
+      placeholder: masterfabric-prerelease --check /path/to/project --verbose
+
+  - type: dropdown
+    id: programming-language
+    attributes:
+      label: 💻 Programming Language
+      description: Which programming language is your question about?
+      options:
+        - C/C++
+        - JavaScript/TypeScript
+        - Python
+        - Rust
+        - Go
+        - Dart
+        - Multiple languages
+        - Not applicable
+    validations:
+      required: true
+
+  - type: input
+    id: tool-version
+    attributes:
+      label: 🔧 Tool Version
+      description: MasterFabric Pre-Release Security Checker version you're using.
+      placeholder: Run 'masterfabric-prerelease --version' to get this
+
+  - type: input
+    id: os-version
+    attributes:
+      label: 🖥️ OS Version
+      description: Your operating system version.
+      placeholder: macOS 14.0, Ubuntu 22.04, Windows 11, etc.
+
+  - type: textarea
+    id: research-done
+    attributes:
+      label: 🔍 Research Done
+      description: What have you already tried or researched?
+      placeholder: |
+        - I've checked the documentation at...
+        - I've tried...
+        - I've searched for similar issues...
+        - I've looked at...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about your question here.
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues and discussions for similar questions
+          required: true
+        - label: I have checked the documentation
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I understand this is a public repository and my question will be visible to others
+          required: true

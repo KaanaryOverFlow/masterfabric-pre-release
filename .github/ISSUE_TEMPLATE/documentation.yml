@@ -1,0 +1,192 @@
+name: 📚 Documentation
+description: Report documentation issues or suggest documentation improvements
+title: "[DOCS] "
+labels: ["documentation", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve our documentation! Please fill out the form below to help us understand what needs to be improved.
+
+  - type: textarea
+    id: documentation-issue
+    attributes:
+      label: 📚 Documentation Issue
+      description: Describe the documentation problem or improvement needed.
+      placeholder: What documentation issue are you reporting or improvement are you suggesting?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: documentation-type
+    attributes:
+      label: 📂 Documentation Type
+      description: What type of documentation is affected?
+      options:
+        - README.md
+        - API Documentation
+        - Security Policy Specification
+        - Installation Guide
+        - Configuration Guide
+        - Contributing Guidelines
+        - Code of Conduct
+        - Security Policy
+        - Demo Applications
+        - Command Line Reference
+        - CI/CD Integration
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: file-path
+    attributes:
+      label: 📁 File Path
+      description: The path to the documentation file (if applicable)
+      placeholder: docs/security_policy_spec.md, README.md, etc.
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: 📄 Current Content
+      description: Paste the current documentation content that needs improvement (if applicable).
+      placeholder: |
+        ```markdown
+        Current documentation content here...
+        ```
+      render: markdown
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: ✨ Suggested Improvement
+      description: Describe how the documentation should be improved.
+      placeholder: |
+        - What should be added?
+        - What should be changed?
+        - What should be clarified?
+        - What examples should be included?
+    validations:
+      required: true
+
+  - type: textarea
+    id: improved-content
+    attributes:
+      label: 📝 Improved Content
+      description: If you have specific improvements, paste the improved content here.
+      placeholder: |
+        ```markdown
+        Improved documentation content here...
+        ```
+      render: markdown
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 🎯 Issue Type
+      description: What type of documentation issue is this?
+      options:
+        - Missing information
+        - Incorrect information
+        - Unclear/confusing content
+        - Outdated information
+        - Missing examples
+        - Poor formatting
+        - Broken links
+        - Typo/grammar error
+        - Translation needed
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚨 Priority
+      description: How important is this documentation improvement?
+      options:
+        - Critical (blocking users from using the tool)
+        - High (significant confusion or missing key information)
+        - Medium (minor improvements that would help users)
+        - Low (cosmetic improvements)
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: 👥 User Impact
+      description: How does this documentation issue affect users?
+      placeholder: |
+        - Who is affected by this issue?
+        - What problems does this cause?
+        - How does this impact the user experience?
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: 📝 Examples
+      description: If suggesting new examples or code snippets, provide them here.
+      placeholder: |
+        ```bash
+        # Example command
+        masterfabric-prerelease --check /path/to/project
+        ```
+        
+        ```yaml
+        # Example configuration
+        failure_threshold: HIGH
+        approved_sdks:
+          - name: "react"
+            versions: ">=18.0.0"
+        ```
+
+  - type: checkboxes
+    id: documentation-areas
+    attributes:
+      label: 📚 Documentation Areas
+      description: Which areas of documentation need improvement?
+      options:
+        - label: Installation instructions
+          required: false
+        - label: Configuration examples
+          required: false
+        - label: Command line usage
+          required: false
+        - label: Security policy configuration
+          required: false
+        - label: CI/CD integration
+          required: false
+        - label: Troubleshooting guide
+          required: false
+        - label: API reference
+          required: false
+        - label: Contributing guidelines
+          required: false
+        - label: Demo applications
+          required: false
+        - label: Error messages and solutions
+          required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about the documentation issue here.
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I understand this is a public repository and my issue will be visible to others
+          required: true
+        - label: I am willing to help improve the documentation if needed
+          required: false

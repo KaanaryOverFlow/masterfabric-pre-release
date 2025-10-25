@@ -1,0 +1,201 @@
+name: ⚡ Performance Issue
+description: Report performance issues or suggest performance improvements
+title: "[PERFORMANCE] "
+labels: ["performance", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a performance issue! Please provide detailed information to help us understand and optimize the performance.
+
+  - type: textarea
+    id: performance-issue
+    attributes:
+      label: ⚡ Performance Issue Description
+      description: Describe the performance issue you're experiencing.
+      placeholder: What performance problem are you encountering?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: performance-type
+    attributes:
+      label: 📊 Performance Type
+      description: What type of performance issue is this?
+      options:
+        - Slow scan execution
+        - High memory usage
+        - High CPU usage
+        - Slow CVE API responses
+        - Slow dependency analysis
+        - Slow cryptographic scanning
+        - Slow binary analysis
+        - Slow static analysis
+        - Slow report generation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-performance
+    attributes:
+      label: 📈 Current Performance
+      description: Describe the current performance metrics.
+      placeholder: |
+        - Scan time: X seconds/minutes
+        - Memory usage: X MB/GB
+        - CPU usage: X%
+        - File count: X files
+        - Project size: X MB/GB
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-performance
+    attributes:
+      label: 🎯 Expected Performance
+      description: What performance do you expect or consider acceptable?
+      placeholder: |
+        - Expected scan time: X seconds/minutes
+        - Expected memory usage: X MB/GB
+        - Expected CPU usage: X%
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Steps to reproduce the performance issue.
+      placeholder: |
+        1. Run command '...'
+        2. Wait for '...'
+        3. Observe slow performance
+    validations:
+      required: true
+
+  - type: input
+    id: command-used
+    attributes:
+      label: ⚡ Command Used
+      description: The exact command you used that caused the performance issue.
+      placeholder: masterfabric-prerelease --check /path/to/project --verbose
+    validations:
+      required: true
+
+  - type: textarea
+    id: project-details
+    attributes:
+      label: 📁 Project Details
+      description: Details about the project being analyzed.
+      placeholder: |
+        - Project type: (e.g., Next.js, Flutter, C++, etc.)
+        - Project size: X MB/GB
+        - Number of files: X files
+        - Dependencies: X packages
+        - Lines of code: X lines
+    validations:
+      required: true
+
+  - type: dropdown
+    id: programming-language
+    attributes:
+      label: 💻 Programming Language
+      description: Which programming language is being analyzed?
+      options:
+        - C/C++
+        - JavaScript/TypeScript
+        - Python
+        - Rust
+        - Go
+        - Dart
+        - Multiple languages
+    validations:
+      required: true
+
+  - type: textarea
+    id: system-specs
+    attributes:
+      label: 🖥️ System Specifications
+      description: Your system specifications.
+      placeholder: |
+        - OS: macOS 14.0 / Ubuntu 22.04 / Windows 11
+        - CPU: Intel i7 / AMD Ryzen 7 / Apple M1
+        - RAM: 16GB / 32GB
+        - Storage: SSD / HDD
+        - Architecture: x86_64 / ARM64
+    validations:
+      required: true
+
+  - type: textarea
+    id: profiling-data
+    attributes:
+      label: 📊 Profiling Data
+      description: If you have profiling data, paste it here.
+      placeholder: |
+        ```bash
+        # Time command output
+        time masterfabric-prerelease --check /path/to/project
+        
+        # Memory usage
+        # CPU usage
+        # Other profiling data
+        ```
+      render: shell
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: ⚙️ Configuration
+      description: Your security policy configuration (if applicable).
+      placeholder: |
+        ```yaml
+        # .security.yaml content
+        failure_threshold: HIGH
+        # ... other configuration
+        ```
+      render: yaml
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚨 Priority
+      description: How critical is this performance issue?
+      options:
+        - Critical (tool is unusable)
+        - High (significantly impacts workflow)
+        - Medium (noticeable but manageable)
+        - Low (minor performance impact)
+    validations:
+      required: true
+
+  - type: textarea
+    id: workarounds
+    attributes:
+      label: 🔧 Workarounds
+      description: Any workarounds you've found or temporary solutions.
+      placeholder: |
+        - Workaround 1: ...
+        - Workaround 2: ...
+        - Temporary solution: ...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: Add any other context about the performance issue here.
+      placeholder: Any additional information that might be helpful...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📋 Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided all the requested information
+          required: true
+        - label: I understand this is a public repository and my issue will be visible to others
+          required: true
